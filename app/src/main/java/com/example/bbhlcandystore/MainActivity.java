@@ -3,8 +3,11 @@ package com.example.bbhlcandystore;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    private Button sigupbtn;
+    private Button returnloginpage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
