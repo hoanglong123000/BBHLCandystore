@@ -52,23 +52,17 @@ public class loginActivity extends AppCompatActivity {
                 // If the client side already fills all information then transfer information from UI to logindatabase database.
                 else
                 {
-                    Boolean checkuser = db.checkusername(loginusername);
+                    Boolean checkuser = db.checkusernamepassword(loginusername, loginpassword);
                     // If user side's information didnt exist in logindatabase database then insert information from UI to logindatabase database.
-                    if (checkuser == false) {
-                        Boolean insertinfotodatabase = db.insertData(loginusername, loginpassword);
-                        // If there are no conflict or errors in logindatabase database then create a broadcast let user side knows result.
-                        if (insertinfotodatabase == true) {
-                            Toast.makeText(loginActivity.this, "Bạn đã đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-                            openmainpage();
-
-                        }
-                        // If there are conflicts or errors in logindatabase database.
-                        else {
-                            Toast.makeText(loginActivity.this, "Xin lỗi vì hệ thống gặp sự cố xin bạn hãy bỏ ra thời gian nhập lại thông tin ! ", Toast.LENGTH_SHORT).show();
-                        }
+                    if (checkuser == true) {
+                        Toast.makeText(loginActivity.this, "Bạn đã đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+                        openmainpage();
 
                     }
-
+                    else {
+                        // If there are conflicts or errors in logindatabase database.
+                        Toast.makeText(loginActivity.this, "Xin lỗi vì hệ thống gặp sự cố xin bạn hãy bỏ ra thời gian nhập lại thông tin ! ", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -84,7 +78,7 @@ public class loginActivity extends AppCompatActivity {
     // Function of sign in button.
     public void openmainpage()
     {
-        Intent openmainpage = new Intent(this, listofcandies.class);
+        Intent openmainpage = new Intent(getApplicationContext(), listofcandies.class);
         startActivity(openmainpage);
     }
 

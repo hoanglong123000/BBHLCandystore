@@ -62,7 +62,7 @@ public class DBHelper extends SQLiteOpenHelper{
     }
 
     // Function to check username and its password of database.
-    public Boolean usernamepassword(String username, String password)
+    public Boolean checkusernamepassword(String username, String password)
     {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("Select * from logindatabase where username = ? and pass = ?", new String[]{username, password});
