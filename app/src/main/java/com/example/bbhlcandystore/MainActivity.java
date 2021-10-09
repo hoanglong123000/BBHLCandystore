@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, "Xin lỗi vì hệ thống gặp sự cố xin bạn hãy bỏ ra thời gian nhập lại thông tin ! ", Toast.LENGTH_SHORT).show();
                                 }
 
-                            }
+                              }
                             //If user side's information already exist in logindatabase database.
                             else {
                                 Toast.makeText(MainActivity.this, "Bạn có sẵn thông tin trong hệ thống rồi! Xin hãy cho biết tên của bạn", Toast.LENGTH_SHORT).show();
@@ -75,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Function of return button.
+        returnloginpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rebtn();
+            }
+        });
+
     }
 
 
@@ -83,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent reintent = new Intent(getApplicationContext(), loginActivity.class);
         startActivity(reintent);
+    }
+
+    // Function of return button.
+    public void rebtn()
+    {
+        Intent returnintent = new Intent(getApplicationContext(), loginActivity.class);
+        startActivity(returnintent);
     }
 
 

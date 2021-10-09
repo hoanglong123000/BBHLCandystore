@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BBHLCandystore">
         <activity
+            android:name=".listofcandies"
+            android:exported="true" />
+        <activity
             android:name=".loginActivity"
             android:exported="true" />
         <activity
