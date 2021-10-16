@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registeractivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView6"
+        android:layout_width="408dp"
+        android:layout_height="271dp"
+        android:src="@drawable/sweets1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="267dp"
+        app:srcCompat="@drawable/backgroundcolor" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="408dp"
+        android:layout_height="271dp"
+        android:src="@drawable/sweets1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/white" />
+
+    <Button
+        android:id="@+id/signupbtn2"
+        android:layout_width="185dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:text="Đăng ký"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:backgroundTint="@android:color/holo_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginpasswordtxt"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <Button
+        android:id="@+id/backtologinpagebtn2"
+        android:layout_width="155dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="16dp"
+        android:text="Quay lại"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:backgroundTint="@android:color/holo_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginpasswordtxt"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <EditText
+        android:id="@+id/confirmregpasstxt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/purple_500"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/purple_500"
+        android:textColorLink="@color/purple_500"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginusernametxt"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/usernameloginlbl3"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginBottom="28dp"
+        android:text="Xác định mật khẩu"
+        android:textAllCaps="true"
+        android:textColor="@color/purple_500"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginusernametxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/registerpasswordtxt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="216dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/purple_500"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/purple_500"
+        android:textColorLink="@color/purple_500"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginusernametxt"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/usernameloginlbl4"
+        android:layout_width="170dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="28dp"
+        android:text="Mật khẩu"
+        android:textAllCaps="true"
+        android:textColor="@color/purple_500"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginusernametxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/registerusernametxt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="336dp"
+        android:hint="Nhập tên mà nhân viên muốn"
+        android:textColor="@color/purple_500"
+        android:textColorHint="@color/purple_500"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerpasswordtxt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <TextView
+        android:id="@+id/usernameloginlbl8"
+        android:layout_width="196dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginBottom="28dp"
+        android:text="Tên đăng ký"
+        android:textAllCaps="true"
+        android:textColor="@color/purple_500"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginusernametxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
