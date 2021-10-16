@@ -23,6 +23,12 @@
         android:id="@+id/imageView"
         android:layout_width="411dp"
         android:layout_height="267dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/backgroundcolor" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -39,7 +45,7 @@
         app:tint="@color/white" />
 
     <Button
-        android:id="@+id/signupbtn2"
+        android:id="@+id/signupbtn"
         android:layout_width="185dp"
         android:layout_height="64dp"
         android:layout_marginBottom="16dp"
@@ -55,7 +61,7 @@
         app:layout_constraintVertical_bias="0.284" />
 
     <Button
-        android:id="@+id/backtologinpagebtn2"
+        android:id="@+id/backtologinpagebtn"
         android:layout_width="155dp"
         android:layout_height="63dp"
         android:layout_marginBottom="16dp"
@@ -71,7 +77,7 @@
         app:layout_constraintVertical_bias="0.284" />
 
     <EditText
-        android:id="@+id/confirmregpasstxt2"
+        android:id="@+id/confirmregpasstxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -109,7 +115,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/registerpasswordtxt2"
+        android:id="@+id/registerpasswordtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -147,7 +153,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/registerusernametxt2"
+        android:id="@+id/registerusernametxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"

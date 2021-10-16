@@ -39,7 +39,7 @@ public class registeractivity extends AppCompatActivity {
 
                 // Check whether on the user side already fills all information or not.
                 if (reguser.equals("") || regpass.equals("") || confirmregpass.equals("")) {
-                    Toast.makeText(MainActivity.this, "Kiểm tra lại thông tin và điền lại nếu có sự cố", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(registeractivity.this, "Kiểm tra lại thông tin và điền lại nếu có sự cố", Toast.LENGTH_SHORT).show();
                 }
                 // If the client side already fills all information then transfer information from UI to logindatabase database.
                 else {
@@ -51,24 +51,24 @@ public class registeractivity extends AppCompatActivity {
                             Boolean insertinfotodatabase = db.insertData(reguser, regpass);
                             // If there are no conflict or errors in logindatabase database then create a broadcast let user side knows result.
                             if (insertinfotodatabase == true) {
-                                Toast.makeText(MainActivity.this, "Bạn đã đăng ký thành công!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(registeractivity.this, "Bạn đã đăng ký thành công!", Toast.LENGTH_SHORT).show();
                                 regbtn();
                             }
                             // If there are conflicts or errors in logindatabase database.
                             else {
-                                Toast.makeText(MainActivity.this, "Xin lỗi vì hệ thống gặp sự cố xin bạn hãy bỏ ra thời gian nhập lại thông tin ! ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(registeractivity.this, "Xin lỗi vì hệ thống gặp sự cố xin bạn hãy bỏ ra thời gian nhập lại thông tin ! ", Toast.LENGTH_SHORT).show();
                             }
 
                         }
                         //If user side's information already exist in logindatabase database.
                         else {
-                            Toast.makeText(MainActivity.this, "Bạn có sẵn thông tin trong hệ thống rồi! Xin hãy cho biết tên của bạn", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(registeractivity.this, "Bạn có sẵn thông tin trong hệ thống rồi! Xin hãy cho biết tên của bạn", Toast.LENGTH_SHORT).show();
                         }
 
                     }
                     else
                     {
-                        Toast.makeText(MainActivity.this, "Bạn nhập sai mật khẩu", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(registeractivity.this, "Bạn nhập sai mật khẩu", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -99,5 +99,5 @@ public class registeractivity extends AppCompatActivity {
         Intent returnintent = new Intent(getApplicationContext(), loginActivity.class);
         startActivity(returnintent);
     }
-    }
 }
+
