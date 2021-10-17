@@ -13,12 +13,13 @@
         android:ems="10"
         android:hint="thời gian sản xuất"
         android:inputType="textPersonName"
+        android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633" />
+        app:layout_constraintVertical_bias="0.68" />
 
     <EditText
         android:id="@+id/addressinput"
@@ -27,26 +28,28 @@
         android:ems="10"
         android:hint="Địa chỉ của nơi làm ra"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/dateinput"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.903" />
+        app:layout_constraintVertical_bias="0.518" />
 
     <EditText
         android:id="@+id/PlacetoProduce"
         android:layout_width="380dp"
         android:layout_height="51dp"
-        android:layout_marginTop="164dp"
         android:ems="10"
         android:hint="Nơi xuất xứ"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/price"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.244" />
 
     <EditText
         android:id="@+id/price"
@@ -55,12 +58,13 @@
         android:ems="10"
         android:hint="Giá"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/addressinput"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintVertical_bias="0.377" />
 
     <EditText
         android:id="@+id/TitleofCandy"
@@ -69,6 +73,7 @@
         android:ems="10"
         android:hint="Tên sản phẩm"
         android:inputType="textPersonName"
+        android:textColor="@color/purple_500"
         app:layout_constraintBottom_toTopOf="@+id/PlacetoProduce"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
@@ -77,7 +82,7 @@
         app:layout_constraintVertical_bias="0.745" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageofcandy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,11 +90,11 @@
         app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825"
+        app:layout_constraintVertical_bias="0.864"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/AddCandybtn"
+        android:id="@+id/addcandyproductbtn"
         android:layout_width="225dp"
         android:layout_height="63dp"
         android:text="Thêm sản phẩm"
@@ -99,5 +104,5 @@
         app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.989" />
 </androidx.constraintlayout.widget.ConstraintLayout>
