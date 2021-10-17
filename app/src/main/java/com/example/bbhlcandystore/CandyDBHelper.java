@@ -53,20 +53,21 @@ public class CandyDBHelper extends SQLiteOpenHelper {
     {
         SQLiteDatabase mydb = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("nameofcandy", name);
-        contentValues.put("madeinplace", place);
-        contentValues.put("addressoffactory", address);
-        contentValues.put("priceofcandy", price);
-        contentValues.put("producedate", date);
-        contentValues.put("RepresentedImage", image);
+        contentValues.put(NAME, name);
+        contentValues.put(PLACE, place);
+        contentValues.put(ADDRESS, address);
+        contentValues.put(PRICE, price);
+        contentValues.put(DATE, date);
+        contentValues.put("CandyImage", image);
         long ins = mydb.insert("CandyData", null, contentValues);
         if(ins == -1)
         {
-            Toast.makeText(context, "Lưu dữ liệu thành công!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Có lỗi xảy ra xin hãy nhập lại", Toast.LENGTH_SHORT).show();
+
         }
         else
         {
-            Toast.makeText(context, "Có lỗi xảy ra xin hãy nhập lại", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Lưu dữ liệu thành công!", Toast.LENGTH_SHORT).show();
 
         }
     }
