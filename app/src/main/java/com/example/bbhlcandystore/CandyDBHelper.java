@@ -84,4 +84,26 @@ public class CandyDBHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public void UpdateData(String row_id, String name, String place, String address, String price, String date)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(NAME, name);
+        contentValues.put(PLACE, place);
+        contentValues.put(ADDRESS, address);
+        contentValues.put(PRICE, price);
+        contentValues.put(DATE, date);
+
+        long res = db.update(TABLE_NAME, contentValues, "_id=?", new String[]{row_id});
+        if(res == -1)
+        {
+            Toast.makeText(context, "Có lỗi xảy ra xin hãy nhập lại", Toast.LENGTH_SHORT).show();
+
+        }
+        else
+        {
+            Toast.makeText(context, "Lưu dữ liệu thành công!", Toast.LENGTH_SHORT).show();
+
+        }
+    }
 }

@@ -2,6 +2,7 @@ package com.example.bbhlcandystore;
 
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -18,10 +19,11 @@ import java.util.ArrayList;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
     private Context context;
     private ArrayList candy_id, candy_name, candy_place, candy_address, candy_price, candy_date;
+    Activity activity;
 
-
-    CustomAdapter(Context context, ArrayList candy_id, ArrayList candy_name, ArrayList candy_place, ArrayList candy_address, ArrayList candy_price, ArrayList candy_date)
+    CustomAdapter(Activity activity, Context context, ArrayList candy_id, ArrayList candy_name, ArrayList candy_place, ArrayList candy_address, ArrayList candy_price, ArrayList candy_date)
     {
+        this.activity = activity;
         this.context = context;
         this.candy_id = candy_id;
         this.candy_name = candy_name;
@@ -60,7 +62,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 intent.putExtra("address", String.valueOf(candy_address.get(position)));
                 intent.putExtra("price", String.valueOf(candy_price.get(position)));
                 intent.putExtra("date", String.valueOf(candy_date.get(position)));
-                context.startActivity(intent);
+                activity.startActivityForResult(intent, 1);
             }
         });
     }
@@ -73,7 +75,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView candyid, candyname, candyplace, candyaddress, candyprice, candydate;
-        LinearLayout mainLayout;
+        protected LinearLayout mainLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

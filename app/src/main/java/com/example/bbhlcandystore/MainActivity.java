@@ -1,5 +1,6 @@
 package com.example.bbhlcandystore;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -49,11 +50,20 @@ public class MainActivity extends AppCompatActivity {
 
         displayData();
 
-        customAdapter = new CustomAdapter(MainActivity.this, candy_id, candy_name, candy_place, candy_address, candy_price, candy_date);
+        customAdapter = new CustomAdapter(MainActivity.this, this, candy_id, candy_name, candy_place, candy_address, candy_price, candy_date);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1)
+        {
+            recreate();
+        }
     }
 
     void displayData()

@@ -17,7 +17,7 @@ public class UpdateActivity extends AppCompatActivity {
     private Button updatecandybtn;
     private Button deletecandybutton;
 
-    private String id, name, place, address, price, date;
+    protected String id, name, place, address, price, date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,19 +31,26 @@ public class UpdateActivity extends AppCompatActivity {
         producedate = (EditText) findViewById(R.id.updatedateinput);
         updatecandybtn = (Button) findViewById(R.id.updatecandyproductbtn);
         deletecandybutton = (Button) findViewById(R.id.deletecandybtn);
+        getandsetIntentData();
 
         updatecandybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                CandyDBHelper db = new CandyDBHelper(UpdateActivity.this);
+                name = nameofcandy.getText().toString();
+                place = madeinplace.getText().toString();
+                address = addressofproduceplace.getText().toString();
+                price = priceofcandy.getText().toString();
+                date = producedate.getText().toString();
+                db.UpdateData(id, name, place, address, price, date);
             }
         });
 
-        getIntentData();
+
     }
 
 
-    void getIntentData()
+    void getandsetIntentData()
     {
         if(getIntent().hasExtra("id") && getIntent().hasExtra("name") && getIntent().hasExtra("place") && getIntent().hasExtra("address") && getIntent().hasExtra("price") && getIntent().hasExtra("date"))
         {
