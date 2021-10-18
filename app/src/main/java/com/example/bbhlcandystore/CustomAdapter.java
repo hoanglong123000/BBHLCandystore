@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -20,6 +22,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private Context context;
     private ArrayList candy_id, candy_name, candy_place, candy_address, candy_price, candy_date;
     Activity activity;
+    Animation translate_anim;
 
     CustomAdapter(Activity activity, Context context, ArrayList candy_id, ArrayList candy_name, ArrayList candy_place, ArrayList candy_address, ArrayList candy_price, ArrayList candy_date)
     {
@@ -86,6 +89,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             candyprice = itemView.findViewById(R.id.candyprice);
             candydate = itemView.findViewById(R.id.candydate);
             mainLayout = itemView.findViewById(R.id.mainLayout);
+            translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
+            mainLayout.setAnimation(translate_anim);
         }
     }
 }
