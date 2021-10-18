@@ -1,7 +1,10 @@
 package com.example.bbhlcandystore;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +36,13 @@ public class UpdateActivity extends AppCompatActivity {
         deletecandybutton = (Button) findViewById(R.id.deletecandybtn);
         getandsetIntentData();
 
+        ActionBar ab = getSupportActionBar();
+        if(ab != null)
+        {
+            ab.setTitle(name);
+        }
+
+
         updatecandybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +53,12 @@ public class UpdateActivity extends AppCompatActivity {
                 price = priceofcandy.getText().toString();
                 date = producedate.getText().toString();
                 db.UpdateData(id, name, place, address, price, date);
+            }
+        });
+        deletecandybutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                confirmDialog();
             }
         });
 
@@ -73,4 +89,28 @@ public class UpdateActivity extends AppCompatActivity {
             Toast.makeText(this, "Lỗi dữ liệu", Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void confirmDialog()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Xóa " + name + " ?");
+        builder.setMessage("Bạn có muốn xóa " + name + " ?");
+        builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                CandyDBHelper db = new CandyDBHelper(UpdateActivity.this);
+                db.DeleteOneItem(id);
+                finish();
+            }
+        });
+        builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.create().show();
+
+    }
+
 }
