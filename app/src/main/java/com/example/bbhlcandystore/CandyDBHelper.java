@@ -38,8 +38,8 @@ public class CandyDBHelper extends SQLiteOpenHelper {
                                                                     + PLACE + " TEXT, "
                                                                     + ADDRESS + " TEXT, "
                                                                     + PRICE + " TEXT, "
-                                                                    + DATE + " TEXT, "
-                                                                    + "CandyImage blob);";
+                                                                    + DATE + " TEXT);";
+
         db.execSQL(createtableQuery);
     }
 
@@ -49,7 +49,7 @@ public class CandyDBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void InsertData(String name, String place, String address, String price, String date, byte[] image)
+    public void InsertData(String name, String place, String address, String price, String date)
     {
         SQLiteDatabase mydb = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -58,7 +58,7 @@ public class CandyDBHelper extends SQLiteOpenHelper {
         contentValues.put(ADDRESS, address);
         contentValues.put(PRICE, price);
         contentValues.put(DATE, date);
-        contentValues.put("CandyImage", image);
+
         long ins = mydb.insert("CandyData", null, contentValues);
         if(ins == -1)
         {
@@ -72,21 +72,16 @@ public class CandyDBHelper extends SQLiteOpenHelper {
         }
     }
 
-    public String getNameofCandy(String name)
+    Cursor readallData()
     {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from CandyData Where Nameofcandy = ?", new String[]{name});
-        cursor.moveToFirst();
-        return cursor.getString(1);
+        String query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null)
+        {
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
     }
 
-    public Bitmap getImageofCandy(String name)
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from CandyData Where Nameofcandy = ?", new String[]{name});
-        cursor.moveToFirst();
-        byte[] bitmap = cursor.getBlob(6);
-        Bitmap image = BitmapFactory.decodeByteArray(bitmap, 1, bitmap.length);
-        return image;
-    }
 }

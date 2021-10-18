@@ -2,16 +2,12 @@ package com.example.bbhlcandystore;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Toast;
-
-import java.io.ByteArrayOutputStream;
 
 public class AddCandyActivity extends AppCompatActivity {
     private EditText nameofcandy;
@@ -19,9 +15,11 @@ public class AddCandyActivity extends AppCompatActivity {
     private EditText priceofcandy;
     private EditText addressofproduceplace;
     private EditText producedate;
-    private ImageView candyimage;
+
     private Button addcandybtn;
+
     private CandyDBHelper candydb;
+    private int REQUEST_CODE_GALLERY = 999;
 
     private String namedb;
     private Bitmap candyimagebitmap;
@@ -37,8 +35,11 @@ public class AddCandyActivity extends AppCompatActivity {
         priceofcandy = (EditText) findViewById(R.id.price);
         addressofproduceplace = (EditText) findViewById(R.id.addressinput);
         producedate = (EditText) findViewById(R.id.dateinput);
-        candyimage = (ImageView) findViewById(R.id.imageofcandy);
-        addcandybtn = (Button) findViewById(R.id.addcandyproductbtn);
+
+        addcandybtn = (Button) findViewById(R.id.updatecandyproductbtn);
+
+
+
 
 
 
@@ -46,14 +47,14 @@ public class AddCandyActivity extends AppCompatActivity {
         addcandybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ghostpepperjellybean);
-                ByteArrayOutputStream byteArray = new ByteArrayOutputStream();
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArray);
-                byte[] img = byteArray.toByteArray();
-                candydb = new CandyDBHelper(AddCandyActivity.this);
-                candydb.InsertData(nameofcandy.getText().toString().trim(), madeinplace.getText().toString().trim(), addressofproduceplace.getText().toString().trim(), priceofcandy.getText().toString().trim(), producedate.getText().toString().trim(), img);
 
+                candydb = new CandyDBHelper(AddCandyActivity.this);
+                candydb.InsertData(nameofcandy.getText().toString(), madeinplace.getText().toString(), addressofproduceplace.getText().toString(), priceofcandy.getText().toString().trim(), producedate.getText().toString().trim());
+                Intent intent = new Intent(AddCandyActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
+
+
 }
