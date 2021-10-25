@@ -113,7 +113,7 @@ public class CandyDBHelper extends SQLiteOpenHelper {
         long res = db.delete(TABLE_NAME, "_id=?", new String[]{idcandy});
         if(res == -1)
         {
-            Toast.makeText(context, "Có lỗi xảy ra xin hãy tắt máy và mở lại", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Có lỗi xảy ra xin quý khách hãy tắt máy và mở lại", Toast.LENGTH_SHORT).show();
 
         }
         else

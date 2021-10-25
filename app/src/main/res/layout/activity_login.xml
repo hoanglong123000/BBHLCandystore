@@ -10,22 +10,22 @@
     tools:layout_editor_absoluteY="-67dp">
 
     <EditText
-        android:id="@+id/loginusernametxt"
+        android:id="@+id/loginadminusernametxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="336dp"
         android:hint="Tên đăng nhập của nhân viên"
         android:textColor="@color/purple_500"
         android:textColorHint="@color/purple_200"
         android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/loginpasswordtxt"
+        android:id="@+id/loginadminpasswordtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -41,22 +41,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginusernametxt"
+        app:layout_constraintTop_toBottomOf="@+id/loginadminusernametxt"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/usernameloginlbl"
-        android:layout_width="252dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="28dp"
+        android:id="@+id/usernameloginadminlbl"
+        android:layout_width="331dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="24dp"
         android:text="tên đăng nhập"
         android:textAllCaps="true"
         android:textColor="@color/purple_500"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/loginusernametxt"
+        app:layout_constraintBottom_toTopOf="@+id/loginadminusernametxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -68,15 +68,15 @@
         android:textAllCaps="true"
         android:textColor="@color/purple_500"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/loginpasswordtxt"
+        app:layout_constraintBottom_toTopOf="@+id/loginadminpasswordtxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginusernametxt"
+        app:layout_constraintTop_toBottomOf="@+id/loginadminusernametxt"
         app:layout_constraintVertical_bias="0.975" />
 
 
-    `
+
 
     <Button
         android:id="@+id/signinbtn"
@@ -90,8 +90,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginpasswordtxt"
-        app:layout_constraintVertical_bias="0.321" />
+        app:layout_constraintTop_toBottomOf="@+id/loginadminpasswordtxt"
+        app:layout_constraintVertical_bias="0.678" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView3"
@@ -130,10 +130,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862" />
+        app:layout_constraintVertical_bias="0.948" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

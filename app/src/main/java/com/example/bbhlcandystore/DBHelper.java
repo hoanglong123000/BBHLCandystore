@@ -20,35 +20,40 @@ public class DBHelper extends SQLiteOpenHelper{
     // This function is overwritten(Override) to create a data table in order to create database.
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String createdatabase = "create Table logindatabase(username TEXT primary key, pass TEXT)";
+        String createdatabase = "CREATE TABLE logindatabase(username TEXT primary key, pass TEXT, adminchck BOOLEAN)";
         sqLiteDatabase.execSQL(createdatabase);
     }
 
     // This function will delete data table in database if there is available database.
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("drop Table if exists logindatabase");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS logindatabase");
     }
 
     // Function to insert information into database.
-    public Boolean insertData(String username, String pass)
+    public Boolean insertData(String username, String pass, boolean adminchckbox)
     {
         SQLiteDatabase mydb = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", username);
         contentValues.put("pass", pass);
+        contentValues.put("adminchck", adminchckbox);
         long res = mydb.insert("logindatabase", null, contentValues);
         if (res == -1)
         {
             return false;
         }
         else
+        {
             return true;
+        }
+
     }
 
     // Function to check username in information of database whether it exists or not.
     public Boolean checkusername(String username)
     {
+
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("Select * from logindatabase where username = ?", new String[] { username});
         if (cursor.getCount() > 0)
@@ -71,8 +76,12 @@ public class DBHelper extends SQLiteOpenHelper{
             return true;
         }
         else
+        {
             return false;
+        }
+
     }
+
 
 
 }

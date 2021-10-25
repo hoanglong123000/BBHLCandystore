@@ -94,7 +94,7 @@ public class UpdateActivity extends AppCompatActivity {
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Xóa " + name + " ?");
-        builder.setMessage("Bạn có muốn xóa " + name + " ?");
+        builder.setMessage("Bạn có muốn xóa " + name + " không?");
         builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

@@ -6,27 +6,37 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class registeractivity extends AppCompatActivity {
     private Button sigupbtn;
-    private Button returnloginpage;
     private DBHelper db;
     private EditText regusername;
     private EditText regpassword;
     private EditText confirmpassword;
+    private RadioGroup switchsides;
+    private RadioButton adminside;
+    private RadioButton clientside;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registeractivity);
+
+        //Variables Initialization.
         sigupbtn = (Button) findViewById(R.id.signupbtn);
-        returnloginpage = (Button) findViewById(R.id.backtologinpagebtn);
         regusername = (EditText) findViewById(R.id.registerusernametxt);
         regpassword = (EditText) findViewById(R.id.registerpasswordtxt);
         confirmpassword = (EditText) findViewById(R.id.confirmregpasstxt);
+        switchsides = (RadioGroup) findViewById(R.id.chckboxgroup);
+        adminside = (RadioButton) findViewById(R.id.Adminchckbox);
+        clientside = (RadioButton) findViewById(R.id.clientchckbox);
         db = new DBHelper(this);
+
 
 
         // Function of sign up button.
@@ -35,6 +45,7 @@ public class registeractivity extends AppCompatActivity {
             public void onClick(View view) {
                 String reguser = regusername.getText().toString();
                 String regpass = regpassword.getText().toString();
+
                 String confirmregpass = confirmpassword.getText().toString();
 
                 // Check whether on the user side already fills all information or not.
@@ -48,7 +59,7 @@ public class registeractivity extends AppCompatActivity {
                         Boolean checkuser = db.checkusername(reguser);
                         // If user side's information didnt exist in logindatabase database then insert information from UI to logindatabase database.
                         if (checkuser == false) {
-                            Boolean insertinfotodatabase = db.insertData(reguser, regpass);
+                            Boolean insertinfotodatabase = db.insertData(reguser, regpass, adminside.isChecked()?true:false);
                             // If there are no conflict or errors in logindatabase database then create a broadcast let user side knows result.
                             if (insertinfotodatabase == true) {
                                 Toast.makeText(registeractivity.this, "Bạn đã đăng ký thành công!", Toast.LENGTH_SHORT).show();
@@ -75,13 +86,7 @@ public class registeractivity extends AppCompatActivity {
             }
         });
 
-        // Function of return button.
-        returnloginpage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rebtn();
-            }
-        });
+
 
     }
 
@@ -89,15 +94,20 @@ public class registeractivity extends AppCompatActivity {
     // Function of sign up button.
     public void regbtn()
     {
-        Intent reintent = new Intent(getApplicationContext(), loginActivity.class);
-        startActivity(reintent);
+        Intent adminintent = new Intent(getApplicationContext(), loginActivity.class);
+        Intent clientintent = new Intent(getApplicationContext(), ClientLoginActivity.class);
+
+        if(adminside.isChecked() == true)
+        {
+            startActivity(adminintent);
+        }
+        else if(clientside.isChecked() == true)
+        {
+            startActivity(clientintent);
+        }
+
     }
 
-    // Function of return button.
-    public void rebtn()
-    {
-        Intent returnintent = new Intent(getApplicationContext(), loginActivity.class);
-        startActivity(returnintent);
-    }
+
 }
 

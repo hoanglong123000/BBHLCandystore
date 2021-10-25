@@ -12,9 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BBHLCandystore">
         <activity
+            android:name=".ClientLoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".UpdateActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddCandyActivity"
             android:exported="false"
@@ -28,17 +31,17 @@
             android:exported="true" />
         <activity
             android:name=".loginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="Cửa hàng kẹo">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Cửa hàng kẹo" />
     </application>
 
 </manifest>

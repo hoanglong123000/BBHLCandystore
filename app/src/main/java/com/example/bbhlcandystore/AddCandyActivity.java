@@ -22,7 +22,6 @@ public class AddCandyActivity extends AppCompatActivity {
     private int REQUEST_CODE_GALLERY = 999;
 
     private String namedb;
-    private Bitmap candyimagebitmap;
 
 
     @Override
@@ -35,7 +34,6 @@ public class AddCandyActivity extends AppCompatActivity {
         priceofcandy = (EditText) findViewById(R.id.price);
         addressofproduceplace = (EditText) findViewById(R.id.addressinput);
         producedate = (EditText) findViewById(R.id.dateinput);
-
         addcandybtn = (Button) findViewById(R.id.updatecandyproductbtn);
 
 
@@ -47,7 +45,6 @@ public class AddCandyActivity extends AppCompatActivity {
         addcandybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 candydb = new CandyDBHelper(AddCandyActivity.this);
                 candydb.InsertData(nameofcandy.getText().toString(), madeinplace.getText().toString(), addressofproduceplace.getText().toString(), priceofcandy.getText().toString().trim(), producedate.getText().toString().trim());
                 Intent intent = new Intent(AddCandyActivity.this, MainActivity.class);
