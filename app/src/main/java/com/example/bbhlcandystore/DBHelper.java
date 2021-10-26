@@ -20,7 +20,7 @@ public class DBHelper extends SQLiteOpenHelper{
     // This function is overwritten(Override) to create a data table in order to create database.
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String createdatabase = "CREATE TABLE logindatabase(username TEXT primary key, pass TEXT, adminchck BOOLEAN)";
+        String createdatabase = "CREATE TABLE logindatabase(username TEXT primary key, pass TEXT, adminchck BOOLEAN CHECK(adminchck IN (0, 1)))";
         sqLiteDatabase.execSQL(createdatabase);
     }
 
@@ -31,7 +31,7 @@ public class DBHelper extends SQLiteOpenHelper{
     }
 
     // Function to insert information into database.
-    public Boolean insertData(String username, String pass, boolean adminchckbox)
+    public Boolean insertData(String username, String pass, int adminchckbox)
     {
         SQLiteDatabase mydb = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();

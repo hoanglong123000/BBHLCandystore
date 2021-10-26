@@ -7,7 +7,7 @@
     tools:context=".ClientLoginActivity">
 
     <TextView
-        android:id="@+id/registerlink2"
+        android:id="@+id/registerlinkclient"
         android:layout_width="189dp"
         android:layout_height="54dp"
         android:clickable="true"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.897" />
 
     <Button
-        android:id="@+id/signinbtn2"
+        android:id="@+id/signinclientbtn"
         android:layout_width="183dp"
         android:layout_height="68dp"
         android:text="Đăng nhập"

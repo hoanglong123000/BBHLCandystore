@@ -21,14 +21,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="411dp"
-        android:layout_height="187dp"
+        android:layout_width="414dp"
+        android:layout_height="726dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/backgroundcolor" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -48,17 +48,17 @@
         android:id="@+id/signupbtn"
         android:layout_width="185dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="16dp"
         android:text="Đăng ký"
         android:textColor="@color/white"
         android:textSize="24dp"
         app:backgroundTint="@android:color/holo_purple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginadminpasswordtxt"
-        app:layout_constraintVertical_bias="0.284" />
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
     <EditText
         android:id="@+id/confirmregpasstxt"
@@ -70,7 +70,7 @@
         android:layout_marginBottom="244dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/purple_500"
         android:textColorLink="@color/purple_500"
@@ -90,7 +90,7 @@
         android:layout_marginBottom="28dp"
         android:text="Xác định mật khẩu"
         android:textAllCaps="true"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/loginadminusernametxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,10 +107,10 @@
         android:layout_marginBottom="336dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColor="@color/purple_500"
-        android:textColorHighlight="@color/purple_500"
-        android:textColorHint="@color/purple_500"
-        android:textColorLink="@color/purple_500"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -127,7 +127,7 @@
         android:layout_marginBottom="28dp"
         android:text="Mật khẩu"
         android:textAllCaps="true"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/loginadminusernametxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,8 +142,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:alpha="0.4"
-        android:hint="Nhập tên mà nhân viên hay khách hàng muốn"
-        android:textColor="@color/purple_500"
+        android:hint="Xin hãy nhập tên mà bạn  muốn"
+        android:textColor="@color/white"
         android:textColorHint="@color/purple_500"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -160,7 +160,7 @@
         android:layout_marginBottom="28dp"
         android:text="Tên đăng ký"
         android:textAllCaps="true"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/loginadminusernametxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -184,7 +184,7 @@
             android:layout_width="match_parent"
             android:layout_height="66dp"
             android:text="Nhân viên"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/white"
             android:textSize="30sp" />
 
         <RadioButton
@@ -192,7 +192,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Khách hàng"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/white"
             android:textSize="30sp" />
     </RadioGroup>
 

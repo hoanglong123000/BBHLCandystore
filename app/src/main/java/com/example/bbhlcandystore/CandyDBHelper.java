@@ -103,7 +103,6 @@ public class CandyDBHelper extends SQLiteOpenHelper {
         else
         {
             Toast.makeText(context, "Cập nhật thành công!", Toast.LENGTH_SHORT).show();
-
         }
     }
 

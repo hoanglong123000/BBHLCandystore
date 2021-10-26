@@ -23,10 +23,10 @@ public class ClientLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_client_login);
 
         // Variables's Initialization.
-        USERNAME = (EditText) findViewById(R.id.loginadminusernametxt);
-        PASSWORD = (EditText) findViewById(R.id.loginadminpasswordtxt);
-        sibtn = (Button) findViewById(R.id.signinbtn);
-        reglink = (TextView) findViewById(R.id.registerlink);
+        USERNAME = (EditText) findViewById(R.id.loginusernameclienttxt);
+        PASSWORD = (EditText) findViewById(R.id.loginpasswordclient);
+        sibtn = (Button) findViewById(R.id.signinclientbtn);
+        reglink = (TextView) findViewById(R.id.registerlinkclient);
         db = new DBHelper(this);
 
         // Function of sign up here link.
@@ -73,7 +73,7 @@ public class ClientLoginActivity extends AppCompatActivity {
     // Function of sign up here link.
     public void openregpage()
     {
-        Intent openregisterpage = new Intent(this, registeractivity.class);
+        Intent openregisterpage = new Intent(getApplicationContext(), registeractivity.class);
 
         startActivity(openregisterpage);
     }
@@ -81,8 +81,8 @@ public class ClientLoginActivity extends AppCompatActivity {
     // Function of sign in button.
     public void openmainpage()
     {
-        Intent openmainpage = new Intent(getApplicationContext(), listofcandies.class);
-        startActivity(openmainpage);
+        Intent mainpge = new Intent(getApplicationContext(), listofcandies.class);
+        startActivity(mainpge);
     }
 
 }

@@ -59,7 +59,7 @@ public class registeractivity extends AppCompatActivity {
                         Boolean checkuser = db.checkusername(reguser);
                         // If user side's information didnt exist in logindatabase database then insert information from UI to logindatabase database.
                         if (checkuser == false) {
-                            Boolean insertinfotodatabase = db.insertData(reguser, regpass, adminside.isChecked()?true:false);
+                            Boolean insertinfotodatabase = db.insertData(reguser, regpass, adminside.isChecked()?1:0);
                             // If there are no conflict or errors in logindatabase database then create a broadcast let user side knows result.
                             if (insertinfotodatabase == true) {
                                 Toast.makeText(registeractivity.this, "Bạn đã đăng ký thành công!", Toast.LENGTH_SHORT).show();
@@ -94,14 +94,14 @@ public class registeractivity extends AppCompatActivity {
     // Function of sign up button.
     public void regbtn()
     {
-        Intent adminintent = new Intent(getApplicationContext(), loginActivity.class);
-        Intent clientintent = new Intent(getApplicationContext(), ClientLoginActivity.class);
+        Intent adminintent = new Intent(this, loginActivity.class);
+        Intent clientintent = new Intent(this, ClientLoginActivity.class);
 
-        if(adminside.isChecked() == true)
+        if(adminside.isChecked())
         {
             startActivity(adminintent);
         }
-        else if(clientside.isChecked() == true)
+        else
         {
             startActivity(clientintent);
         }

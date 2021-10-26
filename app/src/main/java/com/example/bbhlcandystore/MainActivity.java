@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Xóa tất cả số kẹo này" + " ?");
-        builder.setMessage("Bạn có muốn xóa hết kẹo này ?");
+        builder.setMessage("Bạn có muốn xóa hết kẹo này không ?");
         builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

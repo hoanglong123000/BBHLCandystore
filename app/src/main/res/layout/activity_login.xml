@@ -8,6 +8,17 @@
     tools:context=".loginActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-67dp">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="414dp"
+        android:layout_height="726dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/backgroundcolor" />
 
     <EditText
         android:id="@+id/loginadminusernametxt"
@@ -16,7 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:hint="Tên đăng nhập của nhân viên"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textColorHint="@color/purple_200"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +44,7 @@
         android:layout_marginTop="112dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/purple_500"
         android:textColorLink="@color/purple_500"
@@ -52,12 +63,13 @@
         android:layout_marginBottom="24dp"
         android:text="tên đăng nhập"
         android:textAllCaps="true"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/loginadminusernametxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/usernameloginlbl2"
@@ -66,7 +78,7 @@
         android:layout_marginBottom="28dp"
         android:text="MẬT KHẨU"
         android:textAllCaps="true"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/loginadminpasswordtxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,16 +105,7 @@
         app:layout_constraintTop_toBottomOf="@+id/loginadminpasswordtxt"
         app:layout_constraintVertical_bias="0.678" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView3"
-        android:layout_width="419dp"
-        android:layout_height="241dp"
-        android:src="@drawable/backgroundcolor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appCompatImageView2"
-        app:layout_constraintVertical_bias="0.0" />
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView2"
@@ -112,7 +115,7 @@
         android:layout_marginLeft="4dp"
         android:src="@drawable/sweets1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView3"
+
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -121,19 +124,20 @@
 
     <TextView
         android:id="@+id/registerlink"
-        android:layout_width="172dp"
-        android:layout_height="48dp"
+        android:layout_width="192dp"
+        android:layout_height="43dp"
         android:clickable="true"
         android:text="Đăng ký tại đây"
-        android:textColor="@color/purple_500"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.939"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
