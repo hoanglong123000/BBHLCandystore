@@ -123,17 +123,16 @@
         android:id="@+id/usernameloginlbl4"
         android:layout_width="170dp"
         android:layout_height="51dp"
-        android:layout_marginTop="304dp"
-        android:layout_marginBottom="28dp"
         android:text="Mật khẩu"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/loginadminusernametxt"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.435" />
 
     <EditText
         android:id="@+id/registerusernametxt"
@@ -144,7 +143,7 @@
         android:alpha="0.4"
         android:hint="Xin hãy nhập tên mà bạn  muốn"
         android:textColor="@color/white"
-        android:textColorHint="@color/purple_500"
+        android:textColorHint="@color/white"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -156,17 +155,16 @@
         android:id="@+id/usernameloginlbl8"
         android:layout_width="196dp"
         android:layout_height="52dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginBottom="28dp"
         android:text="Tên đăng ký"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/loginadminusernametxt"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
 
     <RadioGroup
         android:id="@+id/chckboxgroup"
