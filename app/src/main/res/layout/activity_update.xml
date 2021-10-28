@@ -9,6 +9,18 @@
     tools:layout_editor_absoluteY="35dp">
 
     <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="390dp"
+        android:layout_height="154dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012"
+        app:srcCompat="@drawable/candyjar1" />
+
+    <ImageView
         android:id="@+id/imageView21"
         android:layout_width="167dp"
         android:layout_height="119dp"
@@ -147,10 +159,10 @@
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.226" />
+        app:layout_constraintVertical_bias="0.383" />
 
     <EditText
         android:id="@+id/Updateprice"
@@ -165,7 +177,7 @@
         app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintVertical_bias="0.517" />
 
     <EditText
         android:id="@+id/Updateaddressinput"
@@ -177,24 +189,25 @@
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.518" />
+        app:layout_constraintVertical_bias="0.671" />
 
     <EditText
         android:id="@+id/UpdateTitleofCandy"
         android:layout_width="381dp"
         android:layout_height="58dp"
-        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="Tên sản phẩm"
         android:inputType="textPersonName"
         android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.249" />
 
     <EditText
         android:id="@+id/updatedateinput"
@@ -209,20 +222,7 @@
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.706" />
-
-    <Button
-        android:id="@+id/updatecandyproductbtn"
-        android:layout_width="172dp"
-        android:layout_height="57dp"
-        android:text="Cập nhật"
-        app:backgroundTint="@color/purple_500"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.994" />
+        app:layout_constraintVertical_bias="0.845" />
 
     <Button
         android:id="@+id/deletecandybtn"
@@ -236,5 +236,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.994" />
+
+    <Button
+        android:id="@+id/updatecandybtn"
+        android:layout_width="157dp"
+        android:layout_height="53dp"
+        android:text="Cập nhật"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

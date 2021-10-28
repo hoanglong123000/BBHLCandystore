@@ -6,13 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".ClientLoginActivity">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView3"
+        android:layout_width="411dp"
+        android:layout_height="729dp"
+        android:src="@drawable/backgroundcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView2"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/registerlinkclient"
         android:layout_width="189dp"
         android:layout_height="54dp"
         android:clickable="true"
         android:text="Đăng ký tại đây"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,8 +55,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:hint="Tên đăng nhập của khách"
-        android:textColor="@color/purple_500"
-        android:textColorHint="@color/purple_200"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -59,7 +70,7 @@
         android:layout_height="56dp"
         android:text="tên đăng nhập"
         android:textAllCaps="true"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +85,7 @@
         android:layout_height="53dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/purple_500"
         android:textColorLink="@color/purple_500"
@@ -93,7 +104,7 @@
         android:layout_height="44dp"
         android:text="MẬT KHẨU"
         android:textAllCaps="true"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,16 +113,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.641" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView3"
-        android:layout_width="419dp"
-        android:layout_height="241dp"
-        android:src="@drawable/backgroundcolor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appCompatImageView2"
-        app:layout_constraintVertical_bias="0.0" />
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView2"

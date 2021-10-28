@@ -3,7 +3,6 @@ package com.example.bbhlcandystore;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +33,7 @@ public class AddCandyActivity extends AppCompatActivity {
         priceofcandy = (EditText) findViewById(R.id.price);
         addressofproduceplace = (EditText) findViewById(R.id.addressinput);
         producedate = (EditText) findViewById(R.id.dateinput);
-        addcandybtn = (Button) findViewById(R.id.updatecandyproductbtn);
+        addcandybtn = (Button) findViewById(R.id.insertcandytodatabasebtn);
 
 
 

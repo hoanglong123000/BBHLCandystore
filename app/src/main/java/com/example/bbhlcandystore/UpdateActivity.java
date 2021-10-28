@@ -32,7 +32,7 @@ public class UpdateActivity extends AppCompatActivity {
         priceofcandy = (EditText) findViewById(R.id.Updateprice);
         addressofproduceplace = (EditText) findViewById(R.id.Updateaddressinput);
         producedate = (EditText) findViewById(R.id.updatedateinput);
-        updatecandybtn = (Button) findViewById(R.id.updatecandyproductbtn);
+        updatecandybtn = (Button) findViewById(R.id.updatecandybtn);
         deletecandybutton = (Button) findViewById(R.id.deletecandybtn);
         getandsetIntentData();
 
