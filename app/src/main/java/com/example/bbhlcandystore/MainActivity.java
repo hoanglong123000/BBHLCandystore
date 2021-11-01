@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView nocandyimg;
     private TextView nocandytxt;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         addbtn = (FloatingActionButton) findViewById(R.id.addcandybtn);
         nocandyimg = (ImageView) findViewById(R.id.nocandyimage);
         nocandytxt = (TextView) findViewById(R.id.Nocandydata);
+
+
         addbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -146,4 +149,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+    @Override
+    public void onActivityReenter(int resultCode, Intent data) {
+        super.onActivityReenter(resultCode, data);
+    }
 }

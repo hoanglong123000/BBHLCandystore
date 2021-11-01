@@ -37,9 +37,6 @@ public class AddCandyActivity extends AppCompatActivity {
 
 
 
-
-
-
         //Function of add candy to database button.
         addcandybtn.setOnClickListener(new View.OnClickListener() {
             @Override

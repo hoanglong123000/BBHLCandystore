@@ -112,18 +112,18 @@
 
     <EditText
         android:id="@+id/dateinput"
-        android:layout_width="402dp"
-        android:layout_height="77dp"
+        android:layout_width="389dp"
+        android:layout_height="79dp"
         android:ems="10"
         android:hint="thời gian sản xuất"
         android:inputType="textPersonName"
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.607" />
 
     <EditText
         android:id="@+id/addressinput"
@@ -135,10 +135,10 @@
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintVertical_bias="0.473" />
 
     <EditText
         android:id="@+id/PlacetoProduce"
@@ -150,10 +150,10 @@
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
+        app:layout_constraintVertical_bias="0.257" />
 
     <EditText
         android:id="@+id/price"
@@ -165,10 +165,9 @@
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.357" />
 
     <EditText
         android:id="@+id/TitleofCandy"
@@ -180,20 +179,19 @@
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toTopOf="@+id/PlacetoProduce"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.794" />
+        app:layout_constraintVertical_bias="0.906" />
 
     <Button
         android:id="@+id/insertcandytodatabasebtn"
-        android:layout_width="225dp"
-        android:layout_height="63dp"
+        android:layout_width="197dp"
+        android:layout_height="52dp"
         android:text="Thêm sản phẩm"
         app:backgroundTint="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.989" />
@@ -213,8 +211,8 @@
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="390dp"
-        android:layout_height="154dp"
+        android:layout_width="395dp"
+        android:layout_height="98dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.409"
@@ -222,4 +220,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.006"
         app:srcCompat="@drawable/candyjar1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

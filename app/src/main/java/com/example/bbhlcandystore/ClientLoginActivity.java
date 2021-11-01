@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,22 +46,18 @@ public class ClientLoginActivity extends AppCompatActivity {
                 String loginpassword = PASSWORD.getText().toString();
 
                 // Check whether on the user side already fills all information or not.
-                if (loginusername.equals("") || loginpassword.equals(""))
-                {
+                if (loginusername.equals("") || loginpassword.equals("")) {
                     Toast.makeText(ClientLoginActivity.this, "Kiểm tra lại thông tin và điền lại nếu có sự cố", Toast.LENGTH_SHORT).show();
                 }
 
                 // If the client side already fills all information then transfer information from UI to logindatabase database.
-                else
-                {
+                else {
                     Boolean checkuser = db.checkusernamepassword(loginusername, loginpassword);
                     // If user side's information didnt exist in logindatabase database then insert information from UI to logindatabase database.
                     if (checkuser == true) {
                         Toast.makeText(ClientLoginActivity.this, "Bạn đã đăng nhập thành công!", Toast.LENGTH_SHORT).show();
                         openmainpage();
-
-                    }
-                    else {
+                    } else {
                         // If there are conflicts or errors in logindatabase database.
                         Toast.makeText(ClientLoginActivity.this, "Xin lỗi vì hệ thống gặp sự cố xin bạn hãy bỏ ra thời gian nhập lại thông tin ! ", Toast.LENGTH_SHORT).show();
                     }
@@ -71,18 +68,17 @@ public class ClientLoginActivity extends AppCompatActivity {
     }
 
     // Function of sign up here link.
-    public void openregpage()
-    {
+    public void openregpage() {
         Intent openregisterpage = new Intent(getApplicationContext(), registeractivity.class);
 
         startActivity(openregisterpage);
     }
 
     // Function of sign in button.
-    public void openmainpage()
-    {
+    public void openmainpage() {
         Intent mainpge = new Intent(getApplicationContext(), listofcandies.class);
         startActivity(mainpge);
     }
+
 
 }

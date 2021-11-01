@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class UpdateActivity extends AppCompatActivity {
@@ -19,6 +20,7 @@ public class UpdateActivity extends AppCompatActivity {
     private EditText producedate;
     private Button updatecandybtn;
     private Button deletecandybutton;
+
 
     protected String id, name, place, address, price, date;
 
@@ -34,6 +36,7 @@ public class UpdateActivity extends AppCompatActivity {
         producedate = (EditText) findViewById(R.id.updatedateinput);
         updatecandybtn = (Button) findViewById(R.id.updatecandybtn);
         deletecandybutton = (Button) findViewById(R.id.deletecandybtn);
+
         getandsetIntentData();
 
         ActionBar ab = getSupportActionBar();
@@ -93,7 +96,7 @@ public class UpdateActivity extends AppCompatActivity {
     public void confirmDialog()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Xóa " + name + " ?");
+        builder.setTitle("Xóa " + name);
         builder.setMessage("Bạn có muốn xóa " + name + " không?");
         builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
             @Override

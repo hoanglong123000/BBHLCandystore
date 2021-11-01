@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/imageView23"
-        android:layout_width="390dp"
-        android:layout_height="154dp"
+        android:layout_width="391dp"
+        android:layout_height="113dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
@@ -151,18 +151,18 @@
 
     <EditText
         android:id="@+id/UpdateplaceofProduct"
-        android:layout_width="380dp"
-        android:layout_height="51dp"
+        android:layout_width="385dp"
+        android:layout_height="55dp"
         android:ems="10"
         android:hint="Nơi xuất xứ"
         android:inputType="textPersonName"
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
+        app:layout_constraintVertical_bias="0.302" />
 
     <EditText
         android:id="@+id/Updateprice"
@@ -174,10 +174,10 @@
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.425" />
 
     <EditText
         android:id="@+id/Updateaddressinput"
@@ -189,10 +189,10 @@
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintVertical_bias="0.553" />
 
     <EditText
         android:id="@+id/UpdateTitleofCandy"
@@ -207,22 +207,22 @@
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249" />
+        app:layout_constraintVertical_bias="0.199" />
 
     <EditText
         android:id="@+id/updatedateinput"
-        android:layout_width="402dp"
-        android:layout_height="77dp"
+        android:layout_width="383dp"
+        android:layout_height="72dp"
         android:ems="10"
         android:hint="thời gian sản xuất"
         android:inputType="textPersonName"
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.676" />
 
     <Button
         android:id="@+id/deletecandybtn"

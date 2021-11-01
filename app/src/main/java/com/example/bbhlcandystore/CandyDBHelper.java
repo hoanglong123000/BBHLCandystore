@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import java.io.ByteArrayOutputStream;
+
 public class CandyDBHelper extends SQLiteOpenHelper {
     private Context context;
     private static final String DATABASE_NAME = "CandyData.db";
@@ -22,6 +24,7 @@ public class CandyDBHelper extends SQLiteOpenHelper {
     private static final String PRICE = "Price";
     private static final String ADDRESS = "AddressofFactory";
     private static final String DATE = "ProductDate";
+
 
 
     public CandyDBHelper(@Nullable Context context) {
@@ -40,6 +43,7 @@ public class CandyDBHelper extends SQLiteOpenHelper {
                                                                     + PRICE + " TEXT, "
                                                                     + DATE + " TEXT);";
 
+
         db.execSQL(createtableQuery);
     }
 
@@ -52,6 +56,8 @@ public class CandyDBHelper extends SQLiteOpenHelper {
     public void InsertData(String name, String place, String address, String price, String date)
     {
         SQLiteDatabase mydb = this.getWritableDatabase();
+
+
         ContentValues contentValues = new ContentValues();
         contentValues.put(NAME, name);
         contentValues.put(PLACE, place);
@@ -68,9 +74,10 @@ public class CandyDBHelper extends SQLiteOpenHelper {
         else
         {
             Toast.makeText(context, "Lưu dữ liệu thành công!", Toast.LENGTH_SHORT).show();
-
         }
     }
+
+
 
     Cursor readallData()
     {
@@ -118,7 +125,6 @@ public class CandyDBHelper extends SQLiteOpenHelper {
         else
         {
             Toast.makeText(context, "Xóa thành công!", Toast.LENGTH_SHORT).show();
-
         }
 
     }
