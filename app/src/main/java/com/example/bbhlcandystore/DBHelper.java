@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
-
+// Data liên kết
 public class DBHelper extends SQLiteOpenHelper{
     // Initialize a variable DBName = name of database in String.
     private static final String DBName= "login.db";

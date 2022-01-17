@@ -13,7 +13,9 @@ import android.widget.Toast;
 
 public class ClientLoginActivity extends AppCompatActivity {
     private EditText USERNAME;
+
     private EditText PASSWORD;
+
     private TextView reglink;
     private Button sibtn;
     private DBHelper db;

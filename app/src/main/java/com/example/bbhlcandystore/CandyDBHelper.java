@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import java.io.ByteArrayOutputStream;
-
+// Data liên kết cơ sở dữ liệu Candy.
 public class CandyDBHelper extends SQLiteOpenHelper {
     private Context context;
     private static final String DATABASE_NAME = "CandyData.db";
